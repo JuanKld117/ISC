@@ -1,23 +1,43 @@
-// Clase base Pokemon
-class Pokemon {
-    private String nombre;
+import java.util.Random;
+
+public class Pokemon {
+    private int HP;
     private int nivel;
+    private String nombre;
+    private String tipo;
 
-    public Pokemon(String nombre, int nivel) {
+    public Pokemon(String nombre, String tipo, int nivel) {
         this.nombre = nombre;
+        this.tipo = tipo;
         this.nivel = nivel;
+        this.HP = 100;
     }
 
-    public void atacar() {
-        System.out.println(nombre + " está atacando!");
+    public int getHp() {
+        return HP;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public String getTipo() {
+        return tipo;
+    }
+    public int getNivel() {
+        return nivel;
     }
 
-    public void evolucionar() {
-        System.out.println(nombre + " está evolucionando a un nivel superior.");
+    private void calculaDanio(int danio) {
+        this.HP -= danio;
+        System.out.printf("%s recibe %d puntos de daño\n", this.getNombre(), danio);
     }
-
-    public void info() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Nivel: " + nivel);
+    public void recibirAtaque(String movimiento) {
+        int danio = new Random().nextInt(10) + 1;
+        System.out.printf("%s recibe ATK %s\n", this.getNombre(), movimiento);
+        calculaDanio(danio);
+        System.out.printf("%s tiene ahora %d puntos de vida\n", this.getNombre(), this.getHp());
+    }
+    public void atacar(String movimiento, Pokemon pokemon) {
+        System.out.printf("%s ataca a %s con %s\n", this.getNombre(), pokemon.getNombre(), movimiento);
+        pokemon.recibirAtaque(movimiento);
     }
 }
