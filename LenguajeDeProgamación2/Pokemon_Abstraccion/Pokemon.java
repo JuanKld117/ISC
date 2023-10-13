@@ -2,9 +2,9 @@ import java.util.Random;
 
 public class Pokemon {
     private int HP;
-    private final int nivel;
-    private final String nombre;
-    private final String tipo;
+    private int nivel;
+    private String nombre;
+    private String tipo;
 
     public Pokemon(String nombre, String tipo, int nivel) {
         this.nombre = nombre;
