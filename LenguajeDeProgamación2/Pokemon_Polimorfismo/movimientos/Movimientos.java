@@ -1,6 +1,6 @@
 package pokemon.movimientos;
-
 import pokemon.*;
+
 
 public class Movimientos {
     private String nombre;
@@ -8,13 +8,13 @@ public class Movimientos {
     private Tipo tipo;
     private Clase clase;
 
+    
     public Movimientos(String nombre, int puntosPoder, Tipo tipo, Clase clase) {
         this.nombre = nombre;
         this.puntosPoder = puntosPoder;
         this.tipo = tipo;
         this.clase = clase;
     }
-
     public Movimientos(String nombre, int puntosDeAtaque, int puntosPoder, Tipo tipo, Clase clase) {
         this.nombre = nombre;
         this.puntosDeAtaque = puntosDeAtaque;
@@ -23,26 +23,28 @@ public class Movimientos {
         this.clase = clase;
     }
 
+
+    
     public String getNombre() {
         return nombre;
     }
-
     public int getPuntosPoder() {
         return puntosPoder;
     }
+    public Tipo getTipo() {
+        return tipo; 
+    }
+    public int getPuntosDeAtaque() {
+        return puntosDeAtaque;
+    } 
 
+    
     public void setPuntosPoder(int puntosPoderAtaque) {
         this.puntosPoder = puntosPoderAtaque;
     }
 
-    public Tipo getTipo() {
-        return tipo; 
-    }
 
-    public int getPuntosDeAtaque() {
-        return puntosDeAtaque;
-    }
-
+    
     public double calcularMovimiento(Pokemon pokemon, Movimientos movimiento) {
         double bonificacion = pokemon.obtenerBonificacion(pokemon, movimiento);
         double efectividad = pokemon.obtenerEfectividad(pokemon);
@@ -58,4 +60,3 @@ public class Movimientos {
         return dannio;
     }
 }
-
