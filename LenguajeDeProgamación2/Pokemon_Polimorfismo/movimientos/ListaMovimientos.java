@@ -1,13 +1,12 @@
 package pokemon.movimientos;
-
 import pokemon.Tipo;
-
 import java.util.ArrayList;
 
-public class ListaMovimientos {
 
+public class ListaMovimientos {
     private ArrayList<Movimientos> movimientos = new ArrayList<>();
 
+    
     public ListaMovimientos() {
         movimientos.add(new Movimientos("Tormenta floral", 90, 15, Tipo.PLANTA, Clase.FISICO));
         movimientos.add(new Movimientos("Placaje", 40, 35, Tipo.NORMAL, Clase.FISICO));
@@ -29,6 +28,7 @@ public class ListaMovimientos {
         movimientos.add(new Movimientos("Polvo veneno", 0, 35, Tipo.VENENO, Clase.ESTADO));
     }
 
+    
     public Movimientos buscarMovimientoPorNombre(String nombre) {
         for (Movimientos movimientosFisicos : this.movimientos) if (movimientosFisicos.getNombre().equals(nombre)) return movimientosFisicos;
         for (Movimientos movimientosEspeciales : this.movimientos) if (movimientosEspeciales.getNombre().equals(nombre)) return movimientosEspeciales;
