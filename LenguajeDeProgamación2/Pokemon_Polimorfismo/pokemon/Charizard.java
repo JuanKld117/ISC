@@ -45,7 +45,6 @@ public class Charizard extends Pokemon {
         }
         return efectividad;
     }
-
     
     @Override
     public double obtenerEfectividad(Pokemon pokemon) {
