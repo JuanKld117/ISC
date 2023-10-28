@@ -8,14 +8,8 @@ public class Movimientos {
     private Tipo tipo;
     private Clase clase;
 
-    
-    public Movimientos(String nombre, int puntosPoder, Tipo tipo, Clase clase) {
-        this.nombre = nombre;
-        this.puntosPoder = puntosPoder;
-        this.tipo = tipo;
-        this.clase = clase;
-    }
-    public Movimientos(String nombre, int puntosDeAtaque, int puntosPoder, Tipo tipo, Clase clase) {
+
+public Movimientos(String nombre, int puntosDeAtaque, int puntosPoder, Tipo tipo, Clase clase) {
         this.nombre = nombre;
         this.puntosDeAtaque = puntosDeAtaque;
         this.puntosPoder = puntosPoder;
@@ -23,6 +17,14 @@ public class Movimientos {
         this.clase = clase;
     }
 
+    
+public Movimientos(String nombre, int puntosPoder, Tipo tipo, Clase clase) {
+        this.nombre = nombre;
+        this.puntosPoder = puntosPoder;
+        this.tipo = tipo;
+        this.clase = clase;
+    }
+    
 
     
     public String getNombre() {
