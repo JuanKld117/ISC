@@ -1,6 +1,6 @@
 package pokemon;
-
 import pokemon.movimientos.Movimientos;
+
 
 public abstract class Pokemon implements PokemonInterface {
     private int hp, nivel, variacion, puntosDefensa, puntosAtaque, puntosAtaqueEspecial, puntosDefensaEspecial, velocidad;
@@ -24,36 +24,34 @@ public abstract class Pokemon implements PokemonInterface {
         this.velocidad = velocidad;
     }
 
+    
     public int getHp() {
         return hp;
     }
-
     public String getNombre() {
         return nombre;
     }
-
     public Tipo getTipo() {
         return tipo;
     }
-
     public Tipo getTipo2() {
         return tipo2;
     }
-
     public int getNivel() {
         return nivel;
     }
 
+    
     public void calculaDanio(Pokemon pokemon, Movimientos ataque) {
         this.hp -= (int) ataque.calcularMovimiento(pokemon, ataque);
         System.out.printf("%s recibe %.2f puntos de daño\n", this.getNombre(), ataque.calcularMovimiento(pokemon, ataque));
     }
-
     public void recibirAtaque(Pokemon pokemon, Movimientos ataque) {
         System.out.printf("%s recibe ATK %s\n", this.getNombre(), ataque.getNombre());
         calculaDanio(pokemon, ataque);
     }
 
+    
     @Override
     public boolean seHaConcretadoAtaque(Pokemon pokemon, Movimientos ataque) {
         System.out.printf("%s ataca a %s con %s\n", this.getNombre(), pokemon.getNombre(), ataque.getNombre());
@@ -84,35 +82,29 @@ public abstract class Pokemon implements PokemonInterface {
     public void setMovimiento(int indice, Movimientos movimientos) {
         this.movimientos[indice] = movimientos;
     }
-
     public Movimientos getMovimiento(int indice) {
         return movimientos[indice];
     }
-
     public int getPuntosAtaque() {
         return puntosAtaque;
     }
-
     public int getPuntosDefensa() {
         return puntosDefensa;
     }
-
     public int getPuntosAtaqueEspecial() {
         return puntosAtaqueEspecial;
     }
     public int getPuntosDefensaEspecial() {
         return puntosDefensaEspecial;
     }
-
     public  int getVariacion() {
         return variacion;
     }
-
     public int getVelocidad() {
         return velocidad;
     }
 
-
+    
     @Override 
     public double obtenerBonificacion(Pokemon pokemon, Movimientos movimiento) {
 /*        Tipo tipoPokemon = pokemon.getTipo();
