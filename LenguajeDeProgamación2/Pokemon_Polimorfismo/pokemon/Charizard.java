@@ -17,9 +17,10 @@ public class Charizard extends Pokemon {
         ///Si la debilidad es 0, el daño será neutro y se multiplicarán por 1.
         // Si la debilidad es elevada, el daño se multiplica por 4.
         // Si la debilidad es normal, el daño se multiplica por 2.
-        // Si la resistencia es normal, el daño se divide entre 2.
         // Si la resistencia es elevada, el daño se divide entre 4.
-        // Si es inmune, el daño se multiplica por 0
+        // Si la resistencia es normal, el daño se divide entre 2.
+        // Si es inmune, el daño se multiplica por 0.
+        
         switch (tipo) {
             case ACERO:
             case FUEGO:
@@ -45,6 +46,7 @@ public class Charizard extends Pokemon {
         return efectividad;
     }
 
+    
     @Override
     public double obtenerEfectividad(Pokemon pokemon) {
         double efectividad1 = calcularEfectividad(pokemon.getTipo());
