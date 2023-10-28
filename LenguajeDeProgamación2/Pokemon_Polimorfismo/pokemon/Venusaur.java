@@ -1,11 +1,11 @@
 package pokemon;
-
 import pokemon.movimientos.ListaMovimientos;
+
 
 public class Venusaur extends Pokemon{
     public Venusaur(String nombre) {
-        super(nombre, Tipo.PLANTA, Tipo.VENENO, 364, 289, 364, 291,
-                328, 284);
+        super(nombre, Tipo.PLANTA, Tipo.VENENO, 364, 289, 364, 291, 328, 284);
+
         ListaMovimientos listaMovimientos = new ListaMovimientos();
         setMovimiento(0, listaMovimientos.buscarMovimientoPorNombre("Tormenta floral"));
         setMovimiento(1, listaMovimientos.buscarMovimientoPorNombre("Placaje"));
@@ -13,6 +13,7 @@ public class Venusaur extends Pokemon{
         setMovimiento(3, listaMovimientos.buscarMovimientoPorNombre("Hoja afilada"));
     }
 
+    
     public double calcularEfectividad(Tipo tipo) {
         double efectividad = 1;
         ///Si la debilidad es 0, el daño será neutro y se multiplicarán por 1.
