@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Sheet de Etiquetas HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffa568;
+            color: #333;
+        }
+        header {
+            background-color: #ff793f;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 8px rgba(154, 34, 34, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Cambiado el auto-fill a 3 columnas */
+            gap: 20px;
+        }
+        .section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #333;
+            border-bottom: 2px solid #555;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        .section p {
+            margin: 10px 0;
+        }
+        code {
+            background-color: #e7f3fe;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #e7f3fe;
+            padding: 10px;
+            border-radius: 4px;
+            overflow: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cheat Sheet de Etiquetas HTML</h1>
+</header>
+
+<div class="container">
+    <div class="section">
+        <h2>Etiquetas básicas</h2>
+        <p><code>&lt;html&gt;</code>: Define el documento HTML.</p>
+        <pre><code>&lt;html&gt;
+&lt;/html&gt;</code></pre>
+
+        <p><code>&lt;head&gt;</code>: Contiene metadatos/información para el documento.</p>
+        <pre><code>&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Título&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+
+        <p><code>&lt;body&gt;</code>: Contiene el contenido visible del documento HTML.</p>
+        <pre><code>&lt;body&gt;
+    &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+&lt;/body&gt;</code></pre>
+    </div>
+
+    <div class="section">
+        <h2>Estructura semántica</h2>
+        <p><code>&lt;header&gt;</code>: Representa un grupo de ayudas introductorias o de navegación.</p>
+        <pre><code>&lt;header&gt;
+    &lt;h1&gt;Mi Sitio Web&lt;/h1&gt;
+&lt;/header&gt;</code></pre>
+
+        <p><code>&lt;nav&gt;</code>: Define un conjunto de enlaces de navegación.</p>
+        <pre><code>&lt;nav&gt;
+    &lt;a href="#"&gt;Inicio&lt;/a&gt;
+    &lt;a href="#"&gt;Acerca de&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+        <p><code>&lt;main&gt;</code>: Representa el contenido principal del documento.</p>
+        <pre><code>&lt;main&gt;
+    &lt;h2&gt;Contenido Principal&lt;/h2&gt;
+&lt;/main&gt;</code></pre>
+
+        <p><code>&lt;aside&gt;</code>: Define contenido aparte del contenido principal.</p>
+        <pre><code>&lt;aside&gt;
+    &lt;p&gt;Esta es una barra lateral&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+
+        <p><code>&lt;footer&gt;</code>: Representa el pie de página del documento.</p>
+        <pre><code>&lt;footer&gt;
+    &lt;p&gt;Derechos reservados 2024&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+    </div>
+
+    <div class="section">
+        <h2>Párrafos</h2>
+        <p><code>&lt;p&gt;</code>: Define un párrafo.</p>
+        <pre><code>&lt;p&gt;Este es un párrafo.&lt;/p&gt;</code></pre>
+    </div>
+
+    <div class="section">
+        <h2>Encabezados</h2>
+        <p><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>: Definen encabezados de distintos niveles.</p>
+        <pre><code>&lt;h1&gt;Encabezado 1&lt;/h1&gt;
+&lt;h2&gt;Encabezado 2&lt;/h2&gt;
+&lt;h3&gt;Encabezado 3&lt;/h3&gt;
+&lt;h4&gt;Encabezado 4&lt;/h4&gt;
+&lt;h5&gt;Encabezado 5&lt;/h5&gt;
+&lt;h6&gt;Encabezado 6&lt;/h6&gt;</code></pre>
+    </div>
+
+    <div class="section">
+        <h2>Enlaces</h2>
+        <p><code>&lt;a&gt;</code>: Define un hipervínculo.</p>
+        <pre><code>&lt;a href="https://www.example.com"&gt;Visitar Ejemplo&lt;/a&gt;</code></pre>
+    </div>
+
+    <div class="section">
+        <h2>Listas</h2>
+        <p><code>&lt;ol&gt;</code>: Define una lista ordenada.</p>
+        <pre><code>&lt;ol&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+<p><code>&lt;ul&gt;</code>: Define una lista desordenada.</p>
+<pre><code>&lt;ul&gt;
+&lt;li&gt;Elemento A&lt;/li&gt;
+&lt;li&gt;Elemento B&lt;/ul&gt;</code></pre>
+
+<p><code>&lt;dl&gt;</code>: Define una lista de definiciones.</p>
+<pre><code>&lt;dl&gt;
+&lt;dt&gt;Termino&lt;/dt&gt;
+&lt;dd&gt;Definición del término&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+</div>
+
+<div class="section">
+<h2>Multimedia</h2>
+<p><code>&lt;img&gt;</code>: Define una imagen.</p>
+<pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+
+<p><code>&lt;audio&gt;</code>: Define contenido de sonido.</p>
+<pre><code>&lt;audio controls&gt;
+&lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+
+<p><code>&lt;video&gt;</code>: Define contenido de video.</p>
+<pre><code>&lt;video controls&gt;
+&lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+</div>
+
+<div class="section">
+<h2>Tablas</h2>
+<p><code>&lt;table&gt;</code>: Define una tabla.</p>
+<pre><code>&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;Encabezado 1&lt;/th&gt;
+&lt;th&gt;Encabezado 2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dato 1&lt;/td&gt;
+&lt;td&gt;Dato 2&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+</div>
+
+<div class="section">
+<h2>Formularios</h2>
+<p><code>&lt;form&gt;</code>: Define un formulario.</p>
+<pre><code>&lt;form action="/submit" method="post"&gt;
+&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+&lt;input type="text" id="nombre" name="nombre"&gt;
+&lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;</code></pre>
+
+<p><code>&lt;input&gt;</code>: Define un campo de entrada. Variantes:</p>
+<pre><code>&lt;input type="text" name="nombre"&gt;
+&lt;input type="number" name="edad"&gt;
+&lt;input type="tel" name="telefono"&gt;
+&lt;input type="email" name="correo"&gt;
+&lt;input type="password" name="clave"&gt;
+&lt;input type="radio" name="genero" value="masculino"&gt;
+&lt;input type="checkbox" name="intereses" value="musica"&gt;
+&lt;input type="button" value="Haz clic"&gt;
+&lt;input type="color" name="color"&gt;
+&lt;input type="date" name="fecha"&gt;
+&lt;input type="time" name="hora"&gt;
+&lt;input type="datetime-local" name="fechahora"&gt;
+&lt;input type="file" name="archivo"&gt;
+&lt;input type="hidden" name="secreto" value="valor"&gt;</code></pre>
+
+<p><code>&lt;select&gt;</code>: Define un cuadro combinado.</p>
+<pre><code>&lt;select name="opciones"&gt;
+&lt;option value="opcion1"&gt;Opción 1&lt;/option&gt;
+&lt;option value="opcion2"&gt;Opción 2&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+<p><code>&lt;textarea&gt;</code>: Define un área de texto.</p>
+<pre><code>&lt;textarea name="comentarios"&gt;
+Escribe aquí tus comentarios.
+&lt;/textarea&gt;</code></pre>
+
+<p><code>&lt;label&gt;</code>: Define una etiqueta para un elemento de formulario.</p>
+<pre><code>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+&lt;input type="text" id="nombre" name="nombre"&gt;</code></pre>
+</div>
+</div>
+
+</body>
+</html>
