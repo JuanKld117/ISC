@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Responsivo</title>
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FFE5B4; /* Color de fondo naranja suave */
+        }
+        .container {
+            max-width: 600px; 
+            margin: auto; 
+            background-color: #fff; 
+            padding: 20px;
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 768px) {
+            .text-md-end {
+                text-align: left !important;
+                margin-bottom: 0.5rem;
+            }
+            .btn {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+
+
+
+
+<body>
+
+<div class="container">
+
+    <form action="">
+        <label for="" class="text-start">Formulario:</label>
+
+        <br>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control id" id="floatingInput" placeholder="">
+          <label for="floatingInput">Id:</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control name" id="floatingInput " placeholder="">
+            <label for="floatingInput">Nombre:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control apPaterno" id="floatingInput " placeholder="">
+            <label for="floatingInput">Apellido paterno:</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control apMaterno" id="floatingInput" placeholder="">
+            <label for="floatingInput">Apellido materno:</label>
+          </div>
+          <select class="form-select estado" aria-label="Default select example" value="">
+
+            <option selected>Seleccione su estado</option>
+            <option value="Aguascalientes">Aguascalientes</option>
+            <option value="Baja California">Baja California</option>
+            <option value="Baja California Sur">Baja California Sur</option>
+            <option value="Campeche">Campeche</option>
+            <option value="Chiapas">Chiapas</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Coahuila">Coahuila</option>
+            <option value="Colima">Colima</option>
+            <option value="Durango">Durango</option>
+            <option value="Guanajuato">Guanajuato</option>
+            <option value="Guerrero">Guerrero</option>
+            <option value="Hidalgo">Hidalgo</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="México">México</option>
+            <option value="Michoacán">Michoacán</option>
+            <option value="Morelos">Morelos</option>
+            <option value="Nayarit">Nayarit</option>
+            <option value="Nuevo León">Nuevo León</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Quintana Roo">Quintana Roo</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="Sinaloa">Sinaloa</option>
+            <option value="Sonora">Sonora</option>
+            <option value="Tabasco">Tabasco</option>
+            <option value="Tamaulipas">Tamaulipas</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Veracruz">Veracruz</option>
+            <option value="Yucatán">Yucatán</option>
+            <option value="Zacatecas">Zacatecas</option>
+
+          </select>
+          
+          <br>
+
+          <label for="checked" class="text-start">Sexo:</label>
+
+          <div class="form-check">
+            <input class="form-check-input check-men" type="radio" name="exampleRadios" id="exampleRadios1" value="h">
+            <label class="form-check-label" for="exampleRadios1">
+              Hombre
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input check-woman" type="radio" name="exampleRadios" id="exampleRadios2" value="m">
+            <label class="form-check-label" for="exampleRadios2">
+              Mujer
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input check-otro" type="radio" name="exampleRadios" id="exampleRadios2" value="o">
+            <label class="form-check-label" for="exampleRadios2">
+              Otro
+            </label>
+          </div>
+
+          <br>
+
+          <div class="form-check">
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2 btn-cancelar" type="button" id="btn-cancel">Cancelar</button>
+                <button class="btn btn-primary" id="send" type="submit">Enviar</button>
+              </div>
+
+    </form>
+
+</div>
+
+<script type="module" src="./scripts/sendDataUser.js"></script>
+<script type="module" src="./scripts/form.js"></script>
+</body>
+</html>
